@@ -1,0 +1,350 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "70bdeb66",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "# Q-1: What is Pandas, and how is it different from NumPy?\n",
+    "\n",
+    "# Pandas is a data analysis library that provides flexible and easy-to-use data structures\n",
+    "# such as DataFrame and Series. It is designed for labeled and tabular data manipulation.\n",
+    "# \n",
+    "# Differences between Pandas and NumPy:\n",
+    "# 1. Pandas provides labeled data structures like Series and DataFrame, while NumPy provides ndarrays.\n",
+    "# 2. Pandas supports heterogeneous data types, whereas NumPy arrays are homogeneously typed.\n",
+    "# 3. Pandas is better for data analysis and manipulation, while NumPy excels at numerical computations.\n",
+    "\n",
+    "# Q-2: Explain the difference between a Series and a DataFrame in Pandas.\n",
+    "\n",
+    "# A Series is a one-dimensional labeled array capable of holding any data type.\n",
+    "# A DataFrame is a two-dimensional labeled data structure, similar to a table, where each column can have a different data type.\n",
+    "\n",
+    "# Examples:\n",
+    "\n",
+    "import pandas as pd\n",
+    "\n",
+    "# Creating a Series\n",
+    "series_example = pd.Series([1, 2, 3], index=['a', 'b', 'c'])\n",
+    "print(\"Series Example:\")\n",
+    "print(series_example)\n",
+    "\n",
+    "# Creating a DataFrame\n",
+    "dataframe_example = pd.DataFrame({'Column1': [1, 2, 3], 'Column2': ['A', 'B', 'C']})\n",
+    "print(\"\\nDataFrame Example:\")\n",
+    "print(dataframe_example)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "bcf127d1",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "# Q-3: How can you create a DataFrame in Pandas from a dictionary?\n",
+    "\n",
+    "import pandas as pd\n",
+    "data = {'Name': ['Alice', 'Bob'], 'Age': [25, 30]}\n",
+    "df = pd.DataFrame(data)\n",
+    "print(df)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "93ac42b7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "# Q-4: What is the purpose of the index in a Pandas DataFrame or Series?\n",
+    "\n",
+    "import pandas as pd\n",
+    "data = {'Name': ['Alice', 'Bob'], 'Age': [25, 30]}\n",
+    "df = pd.DataFrame(data)\n",
+    "print(df.index)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "2fcd7552",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "# Q-5: How can you add a new column to an existing DataFrame?\n",
+    "\n",
+    "import pandas as pd\n",
+    "data = {'Name': ['Alice', 'Bob'], 'Age': [25, 30]}\n",
+    "df = pd.DataFrame(data)\n",
+    "df['Salary'] = [50000, 60000]\n",
+    "print(df)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e7f9464f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "# Q-6: Explain how you can delete a column or row from a DataFrame.\n",
+    "\n",
+    "import pandas as pd\n",
+    "data = {'Name': ['Alice', 'Bob'], 'Age': [25, 30]}\n",
+    "df = pd.DataFrame(data)\n",
+    "df.drop('Age', axis=1, inplace=True)  # Delete column\n",
+    "df.drop(0, inplace=True)  # Delete row\n",
+    "print(df)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "625dc740",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "# Q-7: What are the different ways to select subsets of data from a DataFrame?\n",
+    "\n",
+    "import pandas as pd\n",
+    "data = {'Name': ['Alice', 'Bob'], 'Age': [25, 30], 'Salary': [50000, 60000]}\n",
+    "df = pd.DataFrame(data)\n",
+    "print(df[['Name', 'Salary']])  # Select specific columns\n",
+    "print(df.loc[0])  # Select a row by label\n",
+    "print(df.iloc[1])  # Select a row by position\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "60a857c3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "# Q-8: How do you handle missing data in Pandas?\n",
+    "\n",
+    "import pandas as pd\n",
+    "data = {'Name': ['Alice', None], 'Age': [25, 30]}\n",
+    "df = pd.DataFrame(data)\n",
+    "df.fillna('Unknown', inplace=True)  # Replace missing values\n",
+    "print(df)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6d83127e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "# Q-9: How can you group data in a DataFrame and apply aggregate functions?\n",
+    "\n",
+    "import pandas as pd\n",
+    "data = {'Team': ['A', 'A', 'B', 'B'], 'Score': [10, 15, 10, 20]}\n",
+    "df = pd.DataFrame(data)\n",
+    "grouped = df.groupby('Team')\n",
+    "print(grouped.sum())\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "05574663",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "# Q-10: What is the difference between the apply(), map() functions in Pandas?\n",
+    "\n",
+    "import pandas as pd\n",
+    "data = {'Numbers': [1, 2, 3, 4]}\n",
+    "df = pd.DataFrame(data)\n",
+    "df['Square'] = df['Numbers'].apply(lambda x: x**2)  # Using apply\n",
+    "df['Double'] = df['Numbers'].map(lambda x: x*2)  # Using map\n",
+    "print(df)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "626697c3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "# Q-11: How does the merge() function in Pandas differ from the concat() function?\n",
+    "\n",
+    "import pandas as pd\n",
+    "df1 = pd.DataFrame({'ID': [1, 2], 'Name': ['Alice', 'Bob']})\n",
+    "df2 = pd.DataFrame({'ID': [2, 3], 'Score': [85, 90]})\n",
+    "merged = pd.merge(df1, df2, on='ID')  # Merge by ID\n",
+    "concatenated = pd.concat([df1, df2])  # Concatenate along rows\n",
+    "print(merged)\n",
+    "print(concatenated)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d5dc6d1a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "# Q-12: What is the purpose of the pivot_table() function in Pandas?\n",
+    "\n",
+    "import pandas as pd\n",
+    "data = {'City': ['A', 'A', 'B', 'B'], 'Sales': [100, 200, 150, 50]}\n",
+    "df = pd.DataFrame(data)\n",
+    "pivot = df.pivot_table(values='Sales', index='City', aggfunc='sum')\n",
+    "print(pivot)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "017663e6",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "# Q-13: Explain the difference between loc[] and iloc[] in Pandas.\n",
+    "\n",
+    "import pandas as pd\n",
+    "data = {'Name': ['Alice', 'Bob'], 'Age': [25, 30]}\n",
+    "df = pd.DataFrame(data)\n",
+    "print(df.loc[0])  # Access by label\n",
+    "print(df.iloc[1])  # Access by position\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "b4b53747",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "# Q-14: How can you sort a DataFrame by its index or values?\n",
+    "\n",
+    "import pandas as pd\n",
+    "data = {'Name': ['Alice', 'Bob'], 'Age': [30, 25]}\n",
+    "df = pd.DataFrame(data)\n",
+    "print(df.sort_index())  # Sort by index\n",
+    "print(df.sort_values(by='Age'))  # Sort by values\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "4415080d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "# Q-15: If you have a DataFrame with duplicate rows, how can you remove them?\n",
+    "\n",
+    "import pandas as pd\n",
+    "data = {'Name': ['Alice', 'Bob', 'Alice'], 'Age': [25, 30, 25]}\n",
+    "df = pd.DataFrame(data)\n",
+    "df.drop_duplicates(inplace=True)\n",
+    "print(df)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "68bbc2e0",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "# Q-16: How can you check the data types of each column in a DataFrame?\n",
+    "\n",
+    "import pandas as pd\n",
+    "data = {'Name': ['Alice', 'Bob'], 'Age': [25, 30]}\n",
+    "df = pd.DataFrame(data)\n",
+    "print(df.dtypes)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6324680c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "# Q-17: What methods can you use to get a quick statistical summary of a DataFrame?\n",
+    "\n",
+    "import pandas as pd\n",
+    "data = {'Age': [25, 30, 35], 'Salary': [50000, 60000, 70000]}\n",
+    "df = pd.DataFrame(data)\n",
+    "print(df.describe())\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "8c28f8c5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "# Q-18: How can you count the number of unique values in a specific column?\n",
+    "\n",
+    "import pandas as pd\n",
+    "data = {'Name': ['Alice', 'Bob', 'Alice']}\n",
+    "df = pd.DataFrame(data)\n",
+    "print(df['Name'].nunique())\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "4894376b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "# Q-19: How can you identify and filter rows based on a condition in a DataFrame?\n",
+    "\n",
+    "import pandas as pd\n",
+    "data = {'Name': ['Alice', 'Bob'], 'Age': [25, 30]}\n",
+    "df = pd.DataFrame(data)\n",
+    "filtered = df[df['Age'] > 25]\n",
+    "print(filtered)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a76a2c47",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "# Q-20: How can you count the number of unique values in a specific column?\n",
+    "\n",
+    "import pandas as pd\n",
+    "data = {'Name': ['Alice', 'Bob', 'Alice']}\n",
+    "df = pd.DataFrame(data)\n",
+    "print(df['Name'].nunique())\n"
+   ]
+  }
+ ],
+ "metadata": {},
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
