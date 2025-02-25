@@ -1,0 +1,837 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "3586aafd-3933-4064-9e48-d5b35212091c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter The Number: 15\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n",
+      "5\n",
+      "6\n",
+      "7\n",
+      "8\n",
+      "9\n",
+      "10\n",
+      "11\n",
+      "12\n",
+      "13\n",
+      "14\n",
+      "15\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 1. Write a program to print all natural numbers from 1 to n. – using while loop\n",
+    "n=int(input(\"Enter The Number:\"))\n",
+    "i=1\n",
+    "while i<=n:\n",
+    "    print(i)\n",
+    "    i+=1 "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "3e97500d-fa8b-4ef1-9260-09f1bde3f8bb",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter The Number: 10\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "10\n",
+      "9\n",
+      "8\n",
+      "7\n",
+      "6\n",
+      "5\n",
+      "4\n",
+      "3\n",
+      "2\n",
+      "1\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 2. Write a program to print all natural numbers in reverse (from n to 1). –using while loop\n",
+    "n=int(input(\"Enter The Number:\"))\n",
+    "while n>0:\n",
+    "    print(n)\n",
+    "    n-=1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "f781d365-1494-4029-963d-68c9773de67d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "a\n",
+      "b\n",
+      "c\n",
+      "d\n",
+      "e\n",
+      "f\n",
+      "g\n",
+      "h\n",
+      "i\n",
+      "j\n",
+      "k\n",
+      "l\n",
+      "m\n",
+      "n\n",
+      "o\n",
+      "p\n",
+      "q\n",
+      "r\n",
+      "s\n",
+      "t\n",
+      "u\n",
+      "v\n",
+      "w\n",
+      "x\n",
+      "y\n",
+      "z\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 3. Write a program to print all alphabets from a to z. – using while loop\n",
+    "a = \"abcdefghijklmnopqrstuvwxyz\"\n",
+    "index = 0\n",
+    "while index < len(a):\n",
+    "    print(a[index])\n",
+    "    index += 1\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "8c95d849-f323-4414-b617-92917286bf9d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2\n",
+      "4\n",
+      "6\n",
+      "8\n",
+      "10\n",
+      "12\n",
+      "14\n",
+      "16\n",
+      "18\n",
+      "20\n",
+      "22\n",
+      "24\n",
+      "26\n",
+      "28\n",
+      "30\n",
+      "32\n",
+      "34\n",
+      "36\n",
+      "38\n",
+      "40\n",
+      "42\n",
+      "44\n",
+      "46\n",
+      "48\n",
+      "50\n",
+      "52\n",
+      "54\n",
+      "56\n",
+      "58\n",
+      "60\n",
+      "62\n",
+      "64\n",
+      "66\n",
+      "68\n",
+      "70\n",
+      "72\n",
+      "74\n",
+      "76\n",
+      "78\n",
+      "80\n",
+      "82\n",
+      "84\n",
+      "86\n",
+      "88\n",
+      "90\n",
+      "92\n",
+      "94\n",
+      "96\n",
+      "98\n",
+      "100\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 4. Write a program to print all even numbers between 1 to 100. – using while loop\n",
+    "n = 2\n",
+    "while n <= 100:\n",
+    "    print(n)\n",
+    "    n += 2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "05753484-fbad-4c67-9cf4-e81784d240b7",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a number:  5\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Sum of odd numbers: 9\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 5. Write a program to find the sum of all odd numbers between 1 to n.\n",
+    "n = int(input(\"Enter a number: \"))\n",
+    "sum = 0\n",
+    "i = 1\n",
+    "while i <= n:\n",
+    "    if i % 2 != 0:\n",
+    "        sum += i\n",
+    "    i += 1\n",
+    "print(\"Sum of odd numbers:\", sum)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "d2a902b2-97a0-46d8-9f53-c48d3f540138",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a number:  5\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Number of digits: 1\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 6. Write a program to count the number of digits in a number.\n",
+    "number = int(input(\"Enter a number: \"))\n",
+    "count = 0\n",
+    "while number > 0:\n",
+    "    count += 1\n",
+    "    number //= 10\n",
+    "print(\"Number of digits:\", count)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "bc9690c9-ea49-4547-890e-bd14a792ea45",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a number:  45\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Sum of digits: 9\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 7. Write a program to calculate the sum of digits of a number.\n",
+    "number = int(input(\"Enter a number: \"))\n",
+    "sum = 0\n",
+    "while number > 0:\n",
+    "    digit = number % 10\n",
+    "    sum += digit\n",
+    "    number //= 10\n",
+    "print(\"Sum of digits:\", sum)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "96e04496-d4a0-4576-b31d-db50720f4e06",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a number:  456\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "First digit: 4\n",
+      "Last digit: 6\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 8. Write a program to find the first and last digit of a number.\n",
+    "number = int(input(\"Enter a number: \"))\n",
+    "last = number % 10\n",
+    "while number >= 10:\n",
+    "    number //= 10\n",
+    "first = number\n",
+    "print(\"First digit:\", first) \n",
+    "print(\"Last digit:\", last)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "e4f93702-2186-4d25-b498-31fb15f84025",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a number:  456\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Sum of first and last digit: 10\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 9. Write a program to find the sum of first and last digit of a number.\n",
+    "number = int(input(\"Enter a number: \"))\n",
+    "last = number % 10\n",
+    "while number >= 10:\n",
+    "    number //= 10\n",
+    "first = number\n",
+    "sum = first + last\n",
+    "print(\"Sum of first and last digit:\", sum)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "eb67ea5b-141a-4599-8a3f-037a424d7ade",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a number:  123\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Reversed number: 321\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 10.Write a program to enter a number and print its reverse.\n",
+    "number = int(input(\"Enter a number: \"))\n",
+    "rev = 0\n",
+    "while number > 0:\n",
+    "    digit = number % 10\n",
+    "    rev = rev * 10 + digit\n",
+    "    number //= 10\n",
+    "print(\"Reversed number:\", rev)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "ab3d9d47-5828-480a-9bee-63feda0e86f4",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter the number:  2\n",
+      "Enter the power:  3\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 11.Write a program to find the power of a number using for loop.\n",
+    "base = int(input(\"Enter The Base\"))\n",
+    "p = int(input(\"Enter The Power\"))\n",
+    "j = 1\n",
+    "\n",
+    "for i in range(exponent):\n",
+    "    j = j * base\n",
+    "\n",
+    "print(j)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "52b53455-aadf-474f-b29b-577e22eae002",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a number:  5\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "5\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 12.Write a program to find all factors of a number.\n",
+    "number = int(input(\"Enter a number: \"))\n",
+    "factor = 1\n",
+    "while factor <= number:\n",
+    "    if number % factor == 0:\n",
+    "        print(factor)\n",
+    "    factor += 1\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "e0d98b4f-ca39-4385-b302-6300f7f22ad7",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a number:  5\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Factorial: 120\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 13.Write a program to calculate the factorial of a number.\n",
+    "number = int(input(\"Enter a number: \"))\n",
+    "factorial = 1\n",
+    "while number > 0:\n",
+    "    factorial *= number\n",
+    "    number -= 1\n",
+    "print(\"Factorial:\", factorial)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "ff8e1fcc-d8e2-46b5-b423-7dc906f8eb71",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 14.Write a program to find LCM of two numbers.\n",
+    "num1 = int(input(\"Enter first number: \"))\n",
+    "num2 = int(input(\"Enter second number: \"))\n",
+    "lcm = max(num1, num2)\n",
+    "while True:\n",
+    "    if lcm % num1 == 0 and lcm % num2 == 0:\n",
+    "        print(\"LCM:\", lcm)\n",
+    "        break\n",
+    "    lcm += 1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "85a5f109-4b19-4174-878b-29742e917800",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter any number:  5\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5 is a prime number\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 15.Write a program to check whether a number is Prime number or not.\n",
+    "# taking input from user\n",
+    "number = int(input(\"Enter any number: \"))\n",
+    "\n",
+    "if number > 1:\n",
+    "    for i in range(2, number):\n",
+    "        if (number % i) == 0:\n",
+    "            print(number, \"is not a prime number\")\n",
+    "            break\n",
+    "    else:\n",
+    "        print(number, \"is a prime number\")\n",
+    "else:\n",
+    "    print(number, \"is not a prime number\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "a28ebd75-e90c-466b-b5f9-55578156fb36",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 16.Write a program to print all Prime numbers between 1 to n.\n",
+    "n = int(input())\n",
+    "for num in range(2, n+1):\n",
+    "    prime = True\n",
+    "    i = 2\n",
+    "    while i <= num // 2:\n",
+    "        if num % i == 0:\n",
+    "            prime = False\n",
+    "            break\n",
+    "        i += 1\n",
+    "    if prime:\n",
+    "        print(num)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "cfa11949-08cd-4cbe-848a-8e4eda474b26",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a Number 30\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2\n",
+      "3\n",
+      "5\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 17.Write a program to find all prime factors of a number.\n",
+    "num = int(input(\"Enter a Number\"))\n",
+    "\n",
+    "i = 2\n",
+    "while num > 1:\n",
+    "    if num % i == 0:\n",
+    "        print(i)\n",
+    "        num //= i\n",
+    "    else:\n",
+    "        i += 1\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "b6dd1b3a-91dd-4bd2-adb5-8777f5d58fa5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a number:  123\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "123 is not an Armstrong number\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 18.Write a program to check whether a number is an Armstrong number or not.\n",
+    "# Python program to check if the number is an Armstrong number or not\n",
+    "\n",
+    "num = int(input(\"Enter a number: \"))\n",
+    "sum = 0\n",
+    "temp = num\n",
+    "while temp > 0:\n",
+    "   digit = temp % 10\n",
+    "   sum += digit ** 3\n",
+    "   temp //= 10\n",
+    "\n",
+    "if num == sum:\n",
+    "   print(num,\"is an Armstrong number\")\n",
+    "else:\n",
+    "   print(num,\"is not an Armstrong number\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "9fb94057-079e-4d31-942c-199849bee77c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter the number 23\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Not a Strong number\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 19.Write a program to check whether a number is Strong number or not.\n",
+    "n = int(input(\"Enter the number\"))\n",
+    "temp = n\n",
+    "sum = 0\n",
+    "\n",
+    "while n > 0:\n",
+    "    rem = n % 10\n",
+    "    fact = 1\n",
+    "    for i in range(1, rem + 1):\n",
+    "        fact = fact * i\n",
+    "    sum += fact\n",
+    "    n = n // 10\n",
+    "\n",
+    "if sum == temp:\n",
+    "    print(\"Strong number\")\n",
+    "else:\n",
+    "    print(\"Not a Strong number\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "9fcc2318-1842-4692-9f24-12977414c3de",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter The Number 28\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Perfect number\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 20.Write a program to check whether a number is perfect number or not.\n",
+    "num = int(input(\"Enter The Number\"))\n",
+    "sum = 0\n",
+    "\n",
+    "i = 1\n",
+    "while i <= num // 2:\n",
+    "    if num % i == 0:\n",
+    "        sum += i\n",
+    "    i += 1\n",
+    "\n",
+    "if sum == num:\n",
+    "    print(\"Perfect number\")\n",
+    "else:\n",
+    "    print(\"Not a Perfect number\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "c98da8c9-a529-4d0a-82a1-72574e8552a1",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter The Number 10\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "1\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "5\n",
+      "8\n",
+      "13\n",
+      "21\n",
+      "34\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 21.Write a program to print fibonacci series upto n terms.\n",
+    "n = int(input(\"Enter The Number\"))\n",
+    "\n",
+    "a = 0\n",
+    "b = 1\n",
+    "count = 0\n",
+    "\n",
+    "if n == 1:\n",
+    "    print(a)\n",
+    "else:\n",
+    "    while count < n:\n",
+    "        print(a)\n",
+    "        c = a + b\n",
+    "        a = b\n",
+    "        b = c\n",
+    "        count += 1\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "d3e00820-4961-4192-b476-d5839b242b2b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter The Number 11011\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "00100\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 22.Write a program to find ones complement of a binary number\n",
+    "num = input(\"Enter The Number\")\n",
+    "ones = \"\"\n",
+    "for bit in num:\n",
+    "    if bit == '1':\n",
+    "        ones += '0'\n",
+    "    else:\n",
+    "        ones += '1'\n",
+    "\n",
+    "print(ones)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ed22bcef-4061-4f4b-91be-3cd6b2caee05",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
